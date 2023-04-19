@@ -91,7 +91,7 @@ void TabWidgetBase::perform_layout(NVGcontext* ctx) {
 
     nvgFontFace(ctx, "icons");
     m_close_width =
-        nvgTextBounds(ctx, 0, 0, utf8(FA_TIMES_CIRCLE).data(), nullptr, unused);
+        nvgTextBounds(ctx, 0, 0, utf8(FA_CIRCLE_XMARK).data(), nullptr, unused);
 }
 
 Vector2i TabWidgetBase::preferred_size(NVGcontext* ctx) const {
@@ -178,7 +178,7 @@ void TabWidgetBase::draw(NVGcontext* ctx) {
             nvgFillColor(ctx, i == (size_t) m_close_index_pushed ? m_theme->m_text_color_shadow
                                                                  : m_theme->m_text_color);
             bool highlight = m_close_index == (int) i;
-            auto icon = highlight ? FA_TIMES_CIRCLE : FA_TIMES;
+            auto icon = highlight ? FA_CIRCLE_XMARK : FA_XMARK;
             float fs       = font_size() * (highlight ? 1.f : .70f),
                   offset_x = highlight ? 0.f : (fs * .40f),
                   offset_y = highlight ? 0.f : (fs * .21f);

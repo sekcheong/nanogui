@@ -90,7 +90,7 @@ public:
                                        Alignment::Middle, 0, 6));
 
         b = new ToolButton(tools, FA_CLOUD);
-        b = new ToolButton(tools, FA_FAST_FORWARD);
+        b = new ToolButton(tools, FA_FORWARD_FAST);
         b = new ToolButton(tools, FA_COMPASS);
         b = new ToolButton(tools, FA_UTENSILS);
 

@@ -68,10 +68,10 @@ Theme::Theme(NVGcontext *ctx) {
     m_window_popup_transparent           = Color(50, 0);
 
     m_check_box_icon                    = FA_CHECK;
-    m_message_information_icon          = FA_INFO_CIRCLE;
-    m_message_question_icon             = FA_QUESTION_CIRCLE;
-    m_message_warning_icon              = FA_EXCLAMATION_TRIANGLE;
-    m_message_alt_button_icon           = FA_TIMES_CIRCLE;
+    m_message_information_icon          = FA_CIRCLE_INFO;
+    m_message_question_icon             = FA_CIRCLE_QUESTION;
+    m_message_warning_icon              = FA_TRIANGLE_EXCLAMATION;
+    m_message_alt_button_icon           = FA_CIRCLE_XMARK;
     m_message_primary_button_icon       = FA_CHECK;
     m_popup_chevron_right_icon          = FA_CHEVRON_RIGHT;
     m_popup_chevron_left_icon           = FA_CHEVRON_LEFT;
@@ -82,8 +82,14 @@ Theme::Theme(NVGcontext *ctx) {
                                            roboto_regular_ttf_size, 0);
     m_font_sans_bold = nvgCreateFontMem(ctx, "sans-bold", (uint8_t *) roboto_bold_ttf,
                                         roboto_bold_ttf_size, 0);
-    m_font_icons = nvgCreateFontMem(ctx, "icons", (uint8_t *) fontawesome_solid_ttf,
-                                    fontawesome_solid_ttf_size, 0);
+    m_font_icons = nvgCreateFontMem(
+        ctx, 
+        "icons", 
+        (uint8_t *) font_awesome_6_free_solid_900_ttf,
+        font_awesome_6_free_solid_900_ttf_size, 
+        0
+    );
+
     m_font_mono_regular = nvgCreateFontMem(ctx, "mono", (uint8_t *) inconsolata_regular_ttf,
                                            inconsolata_regular_ttf_size, 0);
 
